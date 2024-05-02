@@ -1,0 +1,57 @@
+<app-header></app-header>
+<div class="container min-vh-100">
+  <div class="intro-section">
+    <h1>Home</h1>
+  </div>
+
+  <div class="search-box">
+    <input type="text" class="form-control search-input" placeholder="Tìm sản phẩm">
+    <select class="form-control category">
+      <option selected disabled>Danh mục sản phẩm</option>
+      <option>Đồ điên</option>
+      <option>Bánh</option>
+      <option>Đồ tươi</option>
+    </select>
+  </div>
+  <div class="row">
+    @for (item of [
+    {
+    name: 'product 1', description: 'Lorem ipsum dolor sit amet', warranty: 'warranty 12 months', price: '3500', discount_price: '1500'
+    },
+    {
+    name: 'product 2', description: 'Lorem ipsum dolor sit amet, and det', warranty: 'warranty 12 months', price: '4000', discount_price: '2500'
+    },
+    {
+    name: 'product 3', description: 'Lorem ipsum dolor sit amet and datagrid', warranty: 'warranty 12 months', price: '2500', discount_price: '100'
+    },
+    ];
+    track item.name) {
+    <div class="col-lg-4 col-md-6">
+      <div class="product-item">
+        <img
+          class="product-image"
+          src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="product"
+        >
+        <h3 class="product-name">{{ item.name }}</h3>
+        <p class="product-description">{{ item.description }}</p>
+        <p class="product-warranty">{{ item.warranty }}</p>
+        <p class="product-price">Price: <del>${{ item.price }}</del> $${{ item.discount_price }}</p>
+        <div class="product-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-primary">Add to cart</button>
+          <button class="btn btn-success">Buy now</button>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>
+<app-footer></app-footer>
+

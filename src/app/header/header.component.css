@@ -1,0 +1,13 @@
+.navbar .container #navbar-items .nav-link.active {
+  border-radius: 16px;
+  background-color: rgba(40, 37, 37, 0.53);
+  color: #FFF;
+}
+
+.logo {
+  height: 50px;
+}
+
+#navbar-items {
+  padding: 0 20px;
+}
