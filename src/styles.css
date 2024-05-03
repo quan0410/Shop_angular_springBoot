@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+.intro-section {
+  text-align: center;
+  color: #000;
+  font-size: 40px;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.main {
+  min-height: calc(100vh - 107px);
+}
+
+.info {
+  color: rgb(233, 66, 176);
+}
+
+table {
+  width: 100%;
+  border-radius: 10px;
+  border-collapse: separate;
+  border: 1px solid #fff;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+.product-info img {
+  border-radius: 16px;
+  height: 80px;
+  width: 80px;
+}
+
+.product-info .product-name {
+  margin-left: 8px;
+  font-weight: 500;
+}
